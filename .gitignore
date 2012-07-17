@@ -24,3 +24,10 @@ tmxviewer.exe
 *.intermediate.manifest
 
 tests/test_mapreader
+
+# VI temp files
+.*.swp
+.*.swo
+.*.swn
+.*.swl
+.*.swm
