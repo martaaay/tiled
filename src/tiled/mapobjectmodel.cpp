@@ -392,6 +392,12 @@ void MapObjectModel::setObjectPolygon(MapObject *o, const QPolygonF &polygon)
     emit objectsChanged(QList<MapObject*>() << o);
 }
 
+void MapObjectModel::setObjectRotation(MapObject *o, const int rotation)
+{
+    o->setRotation(rotation);
+    emit objectsChanged(QList<MapObject*>() << o);
+}
+
 void MapObjectModel::setObjectPosition(MapObject *o, const QPointF &pos)
 {
     o->setPosition(pos);

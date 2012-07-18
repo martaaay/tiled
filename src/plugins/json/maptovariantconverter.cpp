@@ -200,6 +200,7 @@ QVariant MapToVariantConverter::toVariant(const ObjectGroup *objectGroup)
         objectVariant["height"] = size.y();
 
         objectVariant["visible"] = object->isVisible();
+        objectVariant["rotation"] = (int)object->rotation();
 
         /* Polygons are stored in this format:
          *

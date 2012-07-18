@@ -56,6 +56,7 @@
 #include "propertiesdialog.h"
 #include "resizedialog.h"
 #include "objectselectiontool.h"
+#include "objectrotationtool.h"
 #include "objectgroup.h"
 #include "offsetmapdialog.h"
 #include "preferences.h"
@@ -363,6 +364,8 @@ MainWindow::MainWindow(QWidget *parent, Qt::WFlags flags)
     toolManager->registerTool(new TileSelectionTool(this));
     toolManager->addSeparator();
     toolManager->registerTool(new ObjectSelectionTool(this));
+    toolManager->registerTool(new ObjectRotationTool(this, false));
+    toolManager->registerTool(new ObjectRotationTool(this, true));
     toolManager->registerTool(new EditPolygonTool(this));
     toolManager->registerTool(areaObjectsTool);
     toolManager->registerTool(tileObjectsTool);

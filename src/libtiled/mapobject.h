@@ -75,7 +75,7 @@ public:
      * Constructor.
      */
     MapObject(const QString &name, const QString &type,
-              const QPointF &pos,
+              const QPointF &pos, const int rotation,
               const QSizeF &size);
 
     /**
@@ -231,6 +231,9 @@ public:
     bool isVisible() const { return mVisible; }
     void setVisible(bool visible) { mVisible = visible; }
 
+    int rotation() const { return mRotation; }
+    void setRotation(int rotation) { mRotation = rotation; }
+
 private:
     QString mName;
     QString mType;
@@ -241,6 +244,7 @@ private:
     Tile *mTile;
     ObjectGroup *mObjectGroup;
     bool mVisible;
+    int mRotation;
 };
 
 } // namespace Tiled

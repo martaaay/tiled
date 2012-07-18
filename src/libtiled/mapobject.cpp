@@ -41,8 +41,9 @@ MapObject::MapObject():
 }
 
 MapObject::MapObject(const QString &name, const QString &type,
-                     const QPointF &pos,
+                     const QPointF &pos, const int rotation,
                      const QSizeF &size):
+    mRotation(rotation),
     mName(name),
     mType(type),
     mPos(pos),
@@ -56,7 +57,7 @@ MapObject::MapObject(const QString &name, const QString &type,
 
 MapObject *MapObject::clone() const
 {
-    MapObject *o = new MapObject(mName, mType, mPos, mSize);
+    MapObject *o = new MapObject(mName, mType, mPos, mRotation, mSize);
     o->setProperties(properties());
     o->setPolygon(mPolygon);
     o->setShape(mShape);

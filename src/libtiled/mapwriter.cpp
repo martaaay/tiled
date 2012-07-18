@@ -504,6 +504,11 @@ void MapWriterPrivate::writeObject(QXmlStreamWriter &w,
     w.writeAttribute(QLatin1String("x"), QString::number(pos.x()));
     w.writeAttribute(QLatin1String("y"), QString::number(pos.y()));
 
+    int rotation = (int)mapObject->rotation();
+    printf("Rotation %d", rotation);
+
+    w.writeAttribute(QLatin1String("rotation"), QString::number(rotation));
+
     if (size.x() != 0)
         w.writeAttribute(QLatin1String("width"), QString::number(size.x()));
     if (size.y() != 0)

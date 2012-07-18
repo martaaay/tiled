@@ -213,6 +213,8 @@ void MapObjectItem::syncWithMapObject()
 
     setPos(pixelPos);
     setZValue(pixelPos.y());
+    setRotation(mObject->rotation());
+    setTransformOriginPoint(QPointF(16.0,-16.0));
 
     mSyncing = true;
 

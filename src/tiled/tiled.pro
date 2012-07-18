@@ -137,7 +137,9 @@ SOURCES += aboutdialog.cpp \
     terrainbrush.cpp \
     terraindock.cpp \
     terrainview.cpp \
-    terrainmodel.cpp
+    terrainmodel.cpp \
+    objectrotationtool.cpp \
+    rotatemapobject.cpp
 
 HEADERS += aboutdialog.h \
     abstractobjecttool.h \
@@ -242,7 +244,9 @@ HEADERS += aboutdialog.h \
     terrainbrush.h \
     terraindock.h \
     terrainview.h \
-    terrainmodel.h
+    terrainmodel.h \
+    objectrotationtool.h \
+    rotatemapobject.h
 
 macx {
     OBJECTIVE_SOURCES += macsupport.mm
