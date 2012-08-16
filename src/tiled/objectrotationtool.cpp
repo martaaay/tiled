@@ -74,8 +74,6 @@ void ObjectRotationTool::mousePressed(QGraphicsSceneMouseEvent *event)
             undoStack->push(new RotateMapObject(mapDocument(), object, oldRotation));
 
             undoStack->endMacro();
-
-            printf("Found item and setRotation = %d\n", newRotation);
         }
         break;
     default:
